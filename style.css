@@ -10,6 +10,7 @@
 
 .startpage{
     background-color: #636C79;
+    width: 100vw;
 }
 
 .startpage>nav{
@@ -17,8 +18,9 @@
     justify-content: space-between;
     color: #ffffff;
     align-items: baseline;
-    padding: 40px;
-    margin-left: 30px;
+    padding: 40px 0;
+    width: 95%;
+    margin: 0 auto;
 }
 
 .lists{
@@ -34,12 +36,21 @@
     font-size: 18px;
 }
 
+.list:hover{
+    color: #10181D;
+}
+
 .startpage>nav>button{
     padding: 15px;
     background-color: #636C79;
     border: 0.1px solid #8591a2;
     color: #ffffff;
     width: 150px;
+}
+
+.startpage>nav>button:hover{
+    background-color:#ffffff;
+    color: #636C79;
 }
 
 .startpage>div{
@@ -75,6 +86,10 @@
     position: relative;
     bottom: 5px;
     right: -40px;
+}
+
+.startpage>div>div>div>button:hover{
+    color: #ffffff;
 }
 
 .startpage>div>div>div>input{
@@ -168,6 +183,10 @@
     font-weight: bolder;
 }
 
+.boxs>div>div>button:hover{
+    color: #10181D;
+}
+
 .words{
     display: flex;
     justify-content: space-around;
@@ -218,6 +237,10 @@
     
 }
 
+.button>button:hover{
+    color: #10181D;
+}
+
 footer{
     background-color: #10181D;
     color: #ffffff;
@@ -230,7 +253,7 @@ footer{
     margin: 20px 20px 20px 20px;
     padding-top: 20px;
     padding-bottom: 20px;
-
+ 
 }
 
 .footer{
@@ -249,10 +272,46 @@ footer{
     margin-top: 20px;
 }
 
+.flist:hover{
+    color: #ffffff;
+}
+
 .flist:first-child{
     color: #ffffff;
     font-weight: bolder;
     font-family: serif;
     font-size: 19px;
     margin-bottom: 30px;
+}
+
+@media screen and (max-width: 950px) {
+    .startpage>div{
+        flex-direction: column;
+        width: 80%;
+        padding-bottom: 30px ;
+        margin: auto auto   ;
+    }
+    .boxs>div{
+        flex-direction: column;
+    }
+    .boxs>div>img{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cards{
+        flex-direction: column;
+        width: 40%;
+        margin: 30px auto;
+    }
+    .words{
+        flex-direction: column;
+        width: 80%;
+        margin: 30px auto;
+        text-align: center;
+    }
+    .footer{
+        flex-direction: column;
+        width: 20%;
+        margin: 20px auto;
+    }
 }
